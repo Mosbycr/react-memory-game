@@ -16,7 +16,7 @@
     },
     {
         "id": 4,
-        "image": "./img/little-chef.png",
+        "image": "./images/yellowCamera.jpg",
         "clicked": false
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "id": 8,
-        "image": "./imgage/spotlightCamera.jpg",
+        "image": "./images/spotlightCamera.jpg",
         "clicked": false
     },
     {
