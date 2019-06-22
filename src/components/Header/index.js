@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <div className="jumbotron">
@@ -10,7 +10,8 @@ function Header() {
           same image twice and the game is over.
         </p>
         <p className="score-board">
-          <span />
+          <span id="scoreCount">Score: </span> 
+          {/* add in score props in Score  */}
         </p>
       </div>
     </header>
