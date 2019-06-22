@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <Wrapper>
-                <Header />
+            <Header />
                 {this.state.imageCards.map(image => (
                     <ImageCard 
                     id={image.id}

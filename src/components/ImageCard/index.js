@@ -3,15 +3,21 @@ import "./index.css";
 
 function ImageCard(props){
 return (
-  <div className="card">
-    <div className="img-container">
-      <img
-        alt={"This is image " + props.id}
-        src={props.image}
-        // onClick={() => props.checkIfClicked(props.id)}
-      />
+  <div className="cardWrap">
+    <div className="row">
+      <div className="col-12">
+        <div className="card">
+          <div className="img-container">
+            <img
+              alt={"This is image " + props.id}
+              src={props.image}
+              // onClick={() => props.checkIfClicked(props.id)}
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
 );
 }
 
