@@ -21,22 +21,22 @@
     },
     {
         "id": 5,
-        "image": "./img/buzz-lightyear.png",
+        "image": "./images/cameraCoffee.jpg",
         "clicked": false
     },
     {
         "id": 6,
-        "image": "./img/ewok.png",
+        "image": "./images/blackCamera.jpg",
         "clicked": false
     },
     {
         "id": 7,
-        "image": "./img/dory.png",
+        "image": "./images/windowCanon.jpg",
         "clicked": false
     },
     {
         "id": 8,
-        "image": "./img/mickey.png",
+        "image": "./imgage/spotlightCamera.jpg",
         "clicked": false
     },
     {
@@ -51,12 +51,12 @@
     },
     {
         "id": 11,
-        "image": "./img/goofy.png",
+        "image": "./images/cameraFriends.jpg",
         "clicked": false
     },
     {
         "id": 12,
-        "image": "./img/pooh.png",
+        "image": "./images/cameraCloseup.jpg",
         "clicked": false
     }
 ]
