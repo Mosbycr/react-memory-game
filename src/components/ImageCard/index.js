@@ -1,5 +1,5 @@
 import React from "react";
-// import "./style.css";
+import "./index.css";
 
 function ImageCard(props){
 return (
@@ -11,7 +11,7 @@ return (
         // onClick={() => props.checkIfClicked(props.id)}
       />
     </div>
-  </div>
+    </div>
 );
 }
 
