@@ -5,22 +5,24 @@ import Wrapper from "./components/Wrapper";
 import imageCards from "./imageCards.json";
 
 class App extends Component {
-    state = {
-        imageCards
-    }
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//           imageCards,
-//           score: 0,
-//           topScore: 0,
-//         };
-//         //binding event handler to this
-//         this.handleClicked = this.handleClicked.bind(this);
-//  }
+    // state = {
+    //     imageCards
+    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+          imageCards,
+          score: 0,
+          topScore: 0,
+        };
+        //binding event handler to this
+        this.handleClicked = this.handleClicked.bind(this);
+ }
 
-    handleClicked = () => {
+    handleClicked = (id) => {
         console.log("I have been clicked!")
+        let clickedImage = this.state.imageCards.filter(image => image.id === id)[0];
+        console.log(clickedImage);
     }
 
     render() {

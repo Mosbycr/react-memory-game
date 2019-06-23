@@ -11,7 +11,7 @@ return (
             <img
               alt={"This is image " + props.id}
               src={props.image}
-              onClick= {props.handleClicked}
+              onClick= {() => props.handleClicked(props.id)}
             />
           </div>
         </div>
