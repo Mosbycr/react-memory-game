@@ -5,9 +5,18 @@ import Wrapper from "./components/Wrapper";
 import imageCards from "./imageCards.json";
 
 class App extends Component {
-    state = {
-        imageCards
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+          imageCards,
+          score: 0,
+          topScore: 0,
+        };
+        //binding event handler to this
+        this.checkifClicked = this.checkifClicked.bind(this);
+         }
+
+
 
     render() {
         return (
@@ -18,7 +27,7 @@ class App extends Component {
                     id={image.id}
                     key={image.id}
                     image={image.image}
-                    clicked={image.clicked}
+                    clicked={this.checkifClicked}
                     />
 
                 ))}
