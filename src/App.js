@@ -26,17 +26,28 @@ class App extends Component {
         console.log("I have been clicked!")
         //going through JSON to find the information that matched the current id with id first using index 0 as it is written is JSON
         let clickedImage = this.state.imageCards.filter(image => image.id === id)[0];
+        let allClickedImages = this.state.imageCards.filter(image => image.clicked === true)[0];
         console.log(clickedImage);
-
+        
         if(!clickedImage.clicked){
             clickedImage.clicked = true;
             console.log(clickedImage);
-
+            // console.log(allClickedImages);
+            
             this.setState ({
                 score: this.state.score + 1,
                 topScore: (this.state.score + 1 > this.state.topScore ? this.state.score + 1 : this.state.topScore),
             })
-            // console.log(score, topScore);
+            
+        } else {
+            // if(clickedImage.clicked){
+            //     imageCards.clicked = false;
+            // }
+            allClickedImages.clicked = false;
+            console.log(imageCards);
+            this.setState ({
+                score: 0,
+            })
         }
     }
 
