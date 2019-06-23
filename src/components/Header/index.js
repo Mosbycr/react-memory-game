@@ -11,8 +11,8 @@ function Header(props) {
           same image twice and the game is over.
         </p>
         <p className="score-board">
-          <span id="scoreCount">Score: Total Score:</span> 
-          {/* add in score props in Score  */}
+          Score: {props.score}  |  TopScore:{props.topScore} 
+      
         </p>
       </div>
     </header>
