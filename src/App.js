@@ -52,10 +52,9 @@ class App extends Component {
     //check if image has been clicked first time and set clicked to false
     if (!clickedImage.clicked) {
       clickedImage.clicked = true;
-      let shuffledImages = this.shuffle(imageCards);
+      // let shuffledImages = this.shuffle(imageCards);
       this.shuffle(imageCards);
       console.log(" this is after shuffle: ", imageCards);
-      console.log(" this is shuffledImages: ", shuffledImages);
 
       //updating score and topscore as user plays
       this.setState({
@@ -66,18 +65,26 @@ class App extends Component {
             ? this.state.score + 1
             : this.state.topScore
       });
+
+      //if player has clicked all 12 images once set score back to 0 and reset game
+      console.log(this.state.score);
+      if(this.state.score === 11){
+          this.setState({
+              score: 0,
+          })
+      }
       //if image has been clicked twice set all image's clicked back to false and score to 0
     } else {
         console.log(allClickedImages);
         allClickedImages.forEach(image => {
             image.clicked = false;
         });
-        console.log("This is after all turned false: ", imageCards);
+        // console.log("This is after all turned false: ", imageCards);
         this.setState({
           score: 0,
         //   imageCards: imageCards,
         });
-        console.log("This is json after reset: ", imageCards);
+        // console.log("This is json after reset: ", imageCards);
     }
   };
 
