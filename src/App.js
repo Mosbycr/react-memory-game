@@ -5,9 +5,6 @@ import Wrapper from "./components/Wrapper";
 import imageCards from "./imageCards.json";
 
 class App extends Component {
-  // state = {
-  //     imageCards
-  // }
   constructor(props) {
     super(props);
     this.state = {
@@ -50,17 +47,16 @@ class App extends Component {
     )[0];
     //grabs all objects in JSON with clicked = true
     let allClickedImages = this.state.imageCards.filter(image => image.clicked === true);
-    // console.log("This is shuffled: ", shuffledImages);
     console.log(clickedImage);
 
-    //check if image has been clicked and set clicked to false
+    //check if image has been clicked first time and set clicked to false
     if (!clickedImage.clicked) {
       clickedImage.clicked = true;
-      // let shuffledImages = this.shuffle(this.state.imageCards);
-      // this.shuffle(imageCards);
-      // console.log(" this is after shuffle: ", imageCards);
+      let shuffledImages = this.shuffle(imageCards);
+      this.shuffle(imageCards);
+      console.log(" this is after shuffle: ", imageCards);
+      console.log(" this is shuffledImages: ", shuffledImages);
 
-      console.log(imageCards);
       //updating score and topscore as user plays
       this.setState({
         // imageCards: shuffledImages,
@@ -76,10 +72,12 @@ class App extends Component {
         allClickedImages.forEach(image => {
             image.clicked = false;
         });
-        // console.log(imageCards);
+        console.log("This is after all turned false: ", imageCards);
         this.setState({
-          score: 0
+          score: 0,
+        //   imageCards: imageCards,
         });
+        console.log("This is json after reset: ", imageCards);
     }
   };
 
