@@ -11,7 +11,7 @@ function Header(props) {
           same image twice and the game is over. Keep trying to get all 12 images!
         </p>
         <p className="score-board">
-          Score: {props.score}  |  TopScore:{props.topScore} 
+          Score: {props.score}   |   TopScore: {props.topScore} 
       
         </p>
       </div>
