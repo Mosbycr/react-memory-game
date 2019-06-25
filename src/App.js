@@ -93,7 +93,7 @@ class App extends Component {
       <Wrapper>
         <Header score={this.state.score} topScore={this.state.topScore} />
         {this.state.imageCards.map(image => (
-          <ImageCard
+        <ImageCard
             id={image.id}
             key={image.id}
             image={image.image}
