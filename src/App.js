@@ -14,7 +14,6 @@ class App extends Component {
     };
     //binding event handler to this
     this.handleClicked = this.handleClicked.bind(this);
-    // this.shuffle = this.shuffle.bind(this)
   }
 
   shuffle = array => {
@@ -42,7 +41,7 @@ class App extends Component {
   handleClicked = id => {
     // console.log(score, topScore);
     console.log("I have been clicked!");
-    //going through JSON to find the information that matched the current id with id first using index 0 as it is written is JSON
+    //going through JSON to find the information that matched the current id using 0 to grab only that information
     let clickedImage = this.state.imageCards.filter(
       image => image.id === id
     )[0];
@@ -53,14 +52,11 @@ class App extends Component {
     //check if image has been clicked first time and set clicked to false
     if (!clickedImage.clicked) {
       clickedImage.clicked = true;
-      // let shuffledImages = this.shuffle(imageCards);
       this.shuffle(imageCards);
       console.log(" this is after shuffle: ", imageCards);
-      // console.log(shuffledImages);
 
       //updating score and topscore as user plays
       this.setState({
-        // imageCards: shuffledImages,
         score: this.state.score + 1,
         topScore:
           this.state.score + 1 > this.state.topScore
@@ -88,9 +84,7 @@ class App extends Component {
         // console.log("This is after all turned false: ", imageCards);
         this.setState({
           score: 0,
-        //   imageCards: imageCards,
         });
-        console.log("This is json after reset: ", imageCards);
     }
   };
 
