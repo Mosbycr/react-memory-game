@@ -5,12 +5,20 @@
 }
 
 .jumbotron {
-  background-color: rgb(226, 225, 211);
-  border: 2px groove black;
+  background-image: radial-gradient(circle, white,rgb(138, 151, 163));
   font-family: 'Didact Gothic', sans-serif;
 }
 
 .display-4 {
-  font-size: 80px;
+  font-size: 70px;
   padding-bottom: 10px;
+}
+
+.lead {
+  font-size: 26px;
+  padding-bottom: 35px;
+}
+
+.score-board {
+  font-size: 28px;
 }
