@@ -14,6 +14,7 @@ class App extends Component {
     };
     //binding event handler to this
     this.handleClicked = this.handleClicked.bind(this);
+    // this.shuffle = this.shuffle.bind(this)
   }
 
   shuffle = array => {
@@ -52,14 +53,14 @@ class App extends Component {
     //check if image has been clicked first time and set clicked to false
     if (!clickedImage.clicked) {
       clickedImage.clicked = true;
-      let shuffledImages = this.shuffle(this.state.imageCards);
-      // this.shuffle(this.state.imageCards);
-      console.log(shuffledImages);
+      // let shuffledImages = this.shuffle(imageCards);
+      this.shuffle(imageCards);
       console.log(" this is after shuffle: ", imageCards);
+      // console.log(shuffledImages);
 
       //updating score and topscore as user plays
       this.setState({
-        imageCards: shuffledImages,
+        // imageCards: shuffledImages,
         score: this.state.score + 1,
         topScore:
           this.state.score + 1 > this.state.topScore
@@ -70,13 +71,13 @@ class App extends Component {
       //if player has clicked all 12 images once set score back to 0 and reset game
       console.log(this.state.score);
       if(this.state.score === 11){
-        
-        allClickedImages.forEach(image => {
-          image.clicked = false;
-        });
           this.setState({
               score: 0,
           })
+
+           allClickedImages.forEach(image => {
+             image.clicked = false;
+           });
       }
       //if image has been clicked twice set all image's clicked back to false and score to 0
     } else {
@@ -84,12 +85,12 @@ class App extends Component {
         allClickedImages.forEach(image => {
             image.clicked = false;
         });
-        console.log("This is after all turned false: ", imageCards);
+        // console.log("This is after all turned false: ", imageCards);
         this.setState({
           score: 0,
-          // imageCards: imageCards,
+        //   imageCards: imageCards,
         });
-        // console.log("This is json after reset: ", imageCards);
+        console.log("This is json after reset: ", imageCards);
     }
   };
 
